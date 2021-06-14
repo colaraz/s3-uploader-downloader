@@ -8,7 +8,9 @@
                 <th style="min-width:120px">Description</th>
                 <th style="min-width:100px">Uploaded By</th>
                 <th style="min-width:120px">Date Uploaded</th>
-                <th style="min-width:80px">Action</th>
+                {% if row.uploaded_by == username or self.runtime.user_is_staff %}
+                    <th style="min-width:80px">Action</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
