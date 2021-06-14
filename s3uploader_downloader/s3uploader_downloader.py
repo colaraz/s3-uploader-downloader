@@ -156,10 +156,11 @@ class UploaderDownloaderXBlock(XBlock):
 
             frag.add_javascript(self.resource_string("static/js/src/bootstrap.min.js"))
             frag.add_javascript(self.resource_string("static/js/src/dnd.min.js"))
-            frag.add_javascript(self.resource_string("static/js/src/s3.fine-uploader.core.min.js"))
-            frag.add_javascript(self.resource_string("static/js/src/s3.fine-uploader.js"))
-            frag.add_javascript(self.resource_string("static/js/src/s3.jquery.fine-uploader.min.js"))
-            frag.add_javascript(loader.render_template("static/js/src/s3uploader_downloader.js",context))
+
+        frag.add_javascript(self.resource_string("static/js/src/s3.fine-uploader.core.min.js"))
+        frag.add_javascript(self.resource_string("static/js/src/s3.fine-uploader.js"))
+        frag.add_javascript(self.resource_string("static/js/src/s3.jquery.fine-uploader.min.js"))
+        frag.add_javascript(loader.render_template("static/js/src/s3uploader_downloader.js",context))
 
         frag.initialize_js('UploaderDownloaderXBlock')
         return frag
